@@ -18,7 +18,7 @@ export class NotificationListComponent implements OnInit {
               private notificationService: NotificationService) {
 
     this.counter = 0;
-    this.ng2cable.subscribe('/api/cable', 'NotificationChannel');
+    this.ng2cable.subscribe('/cable', 'NotificationChannel');
     //By default event name is 'channel name'. But you can pass from backend field { action: 'MyEventName'}
 
     this.broadcaster.on<string>('NotificationChannel').subscribe(

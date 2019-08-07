@@ -13,10 +13,10 @@ export class NotificationService {
   }
 
   createNotification(form: any) {
-    return this.http.post("http://localhost:3000/api/v1/notifications", form).map((res) => res);
+    return this.http.post("/api/v1/notifications", form).map((res) => res);
   }
 
   getListNotifications() {
-    return this.http.get("http://localhost:3000/api/v1/notifications").map((res) => res.json());
+    return this.http.get("/api/v1/notifications").map((res) => res.json());
   }
 }
